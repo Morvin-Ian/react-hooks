@@ -27,7 +27,7 @@ export const registerFormControls = [
         componentType:"input"       
     },
     {
-        type:"text",
+        type:"email",
         name: "email",
         id: "email",
         placeholder:"Enter your email",
