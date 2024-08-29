@@ -7,12 +7,13 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
 import UseFetch from "./components/UseFetch";
+import ReactHookForm from "./components/ReactHookForm";
 
 function App() {
   const { theme } = useContext(GlobalContext)
   const navigate = useNavigate()
-  const { data, loading, errro } = UseFetch('https://dummyjson.com/recipes')
-  if (loading) return <h1>Fetching Data ....</h1>
+  // const { data, loading, errro } = UseFetch('https://dummyjson.com/recipes')
+  // if (loading) return <h1>Fetching Data ....</h1>
 
   return (
     <>
@@ -33,7 +34,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
         </Routes> */}
-      <div>
+      {/* <div>
         <h1>Data List</h1>
         <ul>
           {data?.recipes?.length > 0 ?
@@ -44,7 +45,9 @@ function App() {
               </div>): null
           }
         </ul>
-      </div>
+      </div> */}
+
+      <ReactHookForm/>
     </>
 
   );
