@@ -8,6 +8,9 @@ import Register from "./components/Register";
 import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
 import UseFetch from "./components/UseFetch";
 import ReactHookForm from "./components/ReactHookForm";
+import ProductList from "./components/cart/ProductList";
+import CartList from "./components/cart/CartList";
+import ProductDetails from "./components/cart/ProductDetails";
 
 function App() {
   const { theme } = useContext(GlobalContext)
@@ -47,7 +50,13 @@ function App() {
         </ul>
       </div> */}
 
-      <ReactHookForm/>
+      {/* <ReactHookForm/> */}
+
+      <Routes>
+        <Route path="/products" element={<ProductList/>}/>
+        <Route path="/product/:id" element={<ProductDetails/>}/>
+        <Route path="/cart" element={<CartList/>}/>
+      </Routes>
     </>
 
   );
