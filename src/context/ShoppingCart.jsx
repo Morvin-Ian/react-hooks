@@ -18,6 +18,7 @@ const ShoppingCartProvider = ({children}) => {
     }
     useEffect(() => {
       fetchProducts()
+      setCartItems(JSON.parse(localStorage.getItem("carItems")))
     }, [])
     
 
